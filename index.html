@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Bootstrap 4, from LayoutIt!</title>
+
+	<meta name="description" content="Source code generated using layoutit.com">
+	<meta name="author" content="LayoutIt!">
+
+	<script src="resources/jquery-3.3.1.slim.min.js"></script>
+	<script src="resources/popper.min.js"></script>
+	<link rel="stylesheet" href="resources/bootstrap.min.css">
+	<script src="resources/bootstrap.min.js"></script>
+
+	<style>
+		.vertical-spacing {
+			margin: 3px 0px 3px 0px;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+		.table thead th,
+		.table td {
+			border-left: 1px solid #dee2e6;
+			border-bottom: 1px solid #dee2e6;
+		}
+
+		.table thead th:last-child,
+		.table td:last-child {
+			border-right: 1px solid #dee2e6;
+		}
+
+		.table td {
+			border-bottom: 1px solid #dee2e6;
+		}
+		
+		.table td.noBorder {
+			border-bottom: none;
+			border-top: none;
+		}
+		.table td.onlyBottomBorder {
+			border-top: none;
+			border-bottom: 1px solid #dee2e6;
+		}
+
+
+		table {
+			table-layout: fixed;
+			word-wrap: break-word;
+		}
+
+		.line {
+			width: 6%;
+		}
+
+		.itemNumber {
+			min-width: 12%;
+		}
+
+		.uom {
+			min-width: 10%;
+		}
+
+		.quantity {
+			min-width: 10%;
+		}
+
+		.unitPrice {
+			min-width: 12%;
+		}
+
+		.disc {
+			min-width: 10%;
+		}
+
+		.discAmount {
+			min-width: 12%;
+		}
+
+		.vat {
+			min-width: 10%;
+		}
+
+		.vatAmount {
+			min-width: 12%;
+		}
+
+		.totalAmount {
+			min-width: 12%;
+		}
+
+		table input {
+			width: 100%;
+		}
+
+		.middleContainer span.vertical-spacing.col-md-6 {
+			line-height: 30px;
+		}
+
+		.btn-default {
+			background: lightblue;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4">
+				<img alt="Bootstrap Image Preview" src="resources/images/1.PNG">
+			</div>
+			<div class="col-md-4">
+				<img alt="Bootstrap Image Preview" src="resources/images/2.PNG">
+			</div>
+			<div class="col-md-4">
+				<img alt="Bootstrap Image Preview" src="resources/images/3.PNG">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="row">
+					<span class="vertical-spacing col-md-6">Customer No :</span>
+					<input type="text" class="vertical-spacing col-md-6">
+				</div>
+				<div class="row">
+					<span class="vertical-spacing col-md-6">Customer Vat No :</span>
+					<input type="text" class="vertical-spacing col-md-6">
+				</div>
+				<div class="row">
+					<span class="vertical-spacing col-md-6">Customer Name :</span>
+					<input type="text" class="vertical-spacing col-md-6">
+				</div>
+				<div class="row">
+					<span class="vertical-spacing col-md-6">Customer P.O. No. :</span>
+					<input type="text" class="vertical-spacing col-md-6">
+				</div>
+			</div>
+			<div class="col-md-4 middleContainer">
+				<div class="row">
+					<span class="vertical-spacing col-md-6">:رقم العميل</span>
+					<span class="vertical-spacing col-md-6">Page :</span>
+				</div>
+				<div class="row">
+					<span class="vertical-spacing col-md-6">:رقم ضريبة القيمة المضافة</span>
+					<span class="vertical-spacing col-md-6">Invoice Date (G) :</span>
+				</div>
+				<div class="row">
+					<span class="vertical-spacing col-md-6">:اسم الزبون</span>
+				</div>
+				<div class="row">
+					<span class="vertical-spacing col-md-6">:PO العملاء. لا</span>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="row">
+					<input type="text" class="vertical-spacing col-md-6">
+					<span class="vertical-spacing col-md-6">:صفحة</span>
+				</div>
+				<div class="row">
+					<input type="text" class="vertical-spacing col-md-6">
+					<span class="vertical-spacing col-md-6">:تاريخ الفاتورة</span>
+				</div>
+
+
+			</div>
+		</div>
+		<button class="btn btn-default" id="addRow">Add</button>
+		<table class="table" id="dataTable">
+			<thead>
+				<tr>
+					<th class="line"> Line # </th>
+					<th> Item Number </th>
+					<th> Description </th>
+					<th class="uom"> UOM </th>
+					<th class="quantity"> Quantity </th>
+					<th class="unitPrice"> Unit Price </th>
+					<th class="disc"> Disc % </th>
+					<th class="discAmount"> Disc Amount </th>
+					<th class="vat"> Vat % </th>
+					<th class="vatAmount"> Vat Amount </th>
+					<th class="totalAmount"> Total Amount </th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="id-1">
+					<td> <span class="count">1</span> </td>
+					<td> <input type="text" /> </td>
+					<td> <input type="text" /> </td>
+					<td> <input type="text" /> </td>
+					<td><input type="text" class="quantity" /></td>
+					<td><input type="text" class="unitPrice" /></td>
+					<td> <input type="text" /> </td>
+					<td> <input type="text" /> </td>
+					<td> <input type="text" /> </td>
+					<td> <input type="text" /> </td>
+					<td> <input type="text" class="totalAmount" /> </td>
+				</tr>
+				<tr>
+					<td colspan="7" class="noBorder">
+					</td>
+					<td colspan="2">
+						<span>Grand Total</span>
+					</td>
+					<td colspan="2">
+						<input type="text" class="grandTotal" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="7" class="noBorder">
+					</td>
+					<td colspan="2">
+						<span>Discount</span>
+					</td>
+					<td colspan="2">
+						<input type="text" class="discount" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="7" class="noBorder">
+					</td>
+					<td colspan="2">
+						<span>Net Before VAT</span>
+					</td>
+					<td colspan="2">
+						<input type="text" class="netBeforeVat" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="7" class="noBorder">
+					</td>
+					<td colspan="2">
+						<span>VAT Value</span>
+					</td>
+					<td colspan="2">
+						<input type="text" class="vatValue" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="7" class="onlyBottomBorder">
+					</td>
+					<td colspan="2">
+						<span>Net After VAT</span>
+					</td>
+					<td colspan="2">
+						<input type="text" class="netAfterVat" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="row">
+			<div class="col-md-6">
+				<span class="">Received by:</span>
+			</div>
+			<div class="col-md-6">
+				<span class="">Name:</span>
+			</div>
+			<div class="col-md-6">
+				<span class="">Signature:</span>
+			</div>
+			<div class="col-md-6">
+				<span class="">Issued By:</span>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+<script>
+	$(document).ready(function () {
+		$("#addRow").click(function () {
+			var dataTable = $("#dataTable");
+			var lastRow = dataTable.find("tbody tr:first").clone();
+			var rowId = dataTable.find("tr").length-5;
+			lastRow.attr("class","id-"+rowId)
+			lastRow.find(':text').val('');
+			lastRow.find('.count').text(dataTable.find("tr").length-5);
+			lastRow.insertAfter(dataTable.find("tbody tr.id-"+(rowId-1)));
+		});
+	});
+</script>
+
+</html>
